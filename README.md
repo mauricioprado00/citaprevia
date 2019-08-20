@@ -24,6 +24,30 @@ Stop and remove the docker-compose container set:
 docker-compose down
 ```
 
+## Requirements
+
+```
+sudo apt-get install -y tightvncserver
+sudo apt-get install -y tigervnc-viewer
+# sudo apt-get install -y vncviewer
+```
+
+## vnc-passwd 
+generated with
+
+```
+vncpasswd bin/vnc-passwd
+```
+
+## watch automated execution
+
+```
+docker-compose up -d 
+docker-compose run --rm nightwatch
+sleep 1
+./bin/selenium-view.sh
+```
+
 ## FAQ
 
 ### Permission denied for videos/screenshots folders
